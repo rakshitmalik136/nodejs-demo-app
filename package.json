@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-demo-app",
+  "version": "1.0.0",
+  "description": "Simple Node.js app for CI/CD pipeline",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "dependencies": {}
+}
+
