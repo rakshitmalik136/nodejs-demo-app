@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds') // Jenkins me store hoga
+        IMAGE_NAME = "rakshitmalik136/nodejs-demo-app"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'docker build -t $IMAGE_NAME:latest .'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'echo "Running tests (none configured yet)"'
+            }
+        }
+
+        stage('Push to DockerHub') {
+            steps {
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker push $IMAGE_NAME:latest'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deploy step (can be Kubernetes, server, etc.)"'
+            }
+        }
+    }
+}
+
