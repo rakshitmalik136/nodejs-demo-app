@@ -34,11 +34,12 @@ Docker image pushed automatically by CI/CD pipeline:
 
 ## 📸 Proof of Execution
 
-### **1️⃣ GitHub Actions Successful Run**
+### **GitHub Actions Successful Run**
 ![GitHub Actions Success](screenshots/github-actions-success.png)
 
-### **2️⃣ DockerHub Latest Tag**
-![DockerHub Image](screenshots/dockerhub-latest.png)
+### **GitHub Actions Successful Run**
+![GitHub Actions Success](github-actions-success.png)
+>>>>>>> b7351f689d32554793d1d1b37c80e073c199e55f
 
 ---
 
