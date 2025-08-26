@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: demo-app-pod
+  namespace: demo-app
+  labels:
+    app: demo-app
+spec:
+  containers:
+    - name: demo-app
+      image: rakshitmalik136/nodejs-demo-app
+      ports:
+        - containerPort: 3000
+
